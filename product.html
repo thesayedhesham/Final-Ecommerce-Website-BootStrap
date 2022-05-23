@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Shop</title>
+    <link rel="icon" href="imgs/logo.png" />
+    <!--  Logo Font Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Link  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="mstyle.css" />
+    <!-- ///////////////////////// -->
+  </head>
+  <body class="shop_body_style">
+    <header id="navbar">
+      <a href="index.html">
+        <span id="logo">
+          <img src="imgs/logo2.png" alt="" />
+        </span>
+      </a>
+      <ul>
+        <li>
+          <a class="active" href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="shop.html">Shop</a>
+        </li>
+        <li>
+          <a href="#footer">About us</a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa-solid fa-cart-plus">
+              <div id="count">0</div>
+            </i>
+          </a>
+        </li>
+        <div id="cartCounter"></div>
+      </ul>
+    </header>
+    <section id="product_details">
+      <div class="single_pro_img">
+        <div class="imgs">
+          <!-- <video src="imgs/shop/bg1.mp4" loop></video> -->
+          <img id="simg1" class="prod_imgs_show" src="imgs/shop/b1.jpeg" />
+          <img id="simg2" class="prod_imgs_show" src="imgs/shop/b2.jpeg" />
+          <img id="simg3" class="prod_imgs_show" src="imgs/shop/b3.jpeg" />
+          <img id="simg4" class="prod_imgs_show" src="imgs/shop/b4.jpeg" />
+        </div>
+        <div onclick="side_slide(-1)" class="slide left">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div onclick="side_slide(1)" class="slide right">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+        <div class="btm_slides">
+          <p onclick="p_slide(1)"></p>
+          <p onclick="p_slide(2)"></p>
+          <p onclick="p_slide(3)"></p>
+          <p onclick="p_slide(4)"></p>
+        </div>
+      </div>
+      <div class="single_pro_details">
+        <span id="prod_name">
+          Acer Predator Helios 300 PH315-54-760S Gaming Laptop
+        </span>
+        <br />
+        <a
+          id="visit_store"
+          href="https://www.amazon.com/stores/Acer/page/0074ABD9-06D1-469D-B509-C3134D6FFFF2?ref_=ast_bln"
+          >Visit the Acer Store</a
+        >
+        <br />
+        <br />
+        <div class="starsrate">
+          <!-- <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star-half-stroke star"></i> -->
+        </div>
+        <p class="price_sec">
+          <strong>Price: <span id="device_price">20000 EGP</span> </strong>
+        </p>
+        <p></p>
+        <table id="prod_table">
+          <tr>
+            <th>Brand</th>
+            <td id="brand">Acer</td>
+          </tr>
+          <tr>
+            <th>Series</th>
+            <td id="series">PH315-54-760S</td>
+          </tr>
+          <!-- <tr>
+            <th>Screen</th>
+            <td id="screen">PH315-54-760S</td>
+          </tr>
+          <tr>
+            <th>Size</th>
+            <td id="size">15.6 Inches</td>
+          </tr>
+          <tr>
+            <th>Hard Disk Size</th>
+            <td id="hd">512 GB</td>
+          </tr>
+          <tr>
+            <th>CPU Model</th>
+            <td id="cpu">Core i7</td>
+          </tr> -->
+        </table>
+        <div id="about">
+          <h4>About this item</h4>
+          <p class="about_list">
+            Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel
+            i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6" Full HD 144Hz
+            3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB
+            Keyboard
+          </p>
+        </div>
+        <div id="cart_box">
+          <input id="addItem" type="button" value="Add To Cart" />
+        </div>
+      </div>
+    </section>
+    <section id="prod_pagination" class="sectionFoot">
+      <a href="shop.html"> <i class="fa-solid fa-arrow-left"></i> Back </a>
+      <a href="product.html">
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <div id="space"></div>
+    </section>
+    <section class="features">
+      <div class="feat">
+        <img src="imgs/features/f1.png" alt="" />
+        <h5>Free Shipping</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f2.png" alt="" />
+        <h5>Online Order</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f3.png" alt="" />
+        <h5>Save Money</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f4.png" alt="" />
+        <h5>Promotions</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f5.png" alt="" />
+        <h5>Happy Sell</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f6.png" alt="" />
+        <h5>F24/7 Support</h5>
+      </div>
+    </section>
+    <section id="newsletters">
+      <div class="newstxt">
+        <h4>Sign Up For Newsletters</h4>
+        <p>
+          Get E-mail updates about our lastest shop and
+          <span>special offers.</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="email" name="" id="" />
+        <button type="submit">Sign Up</button>
+      </div>
+    </section>
+    <footer>
+      <div class="div1">
+        <h2>Contact</h2>
+        <p>
+          <strong>Adress:</strong> Stad Al Gamaa, Stadium St, Al Meseilhah,
+          Shibin el Kom, Menofia, Egypt
+        </p>
+        <p><strong>Phone:</strong>(+202) 353-55628</p>
+
+        <p><strong>Hours:</strong> 9:00 - 16:00 Sat-Thur</p>
+        <div class="follow">
+          <h5>Follow Us</h5>
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="div2">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440806.19780521165!2d31.293468481398186!3d30.328251102556962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7d7223ff2d63f%3A0x9d531b61c0ebb81b!2sITI%20Menofia%20Branch!5e0!3m2!1sar!2seg!4v1651625868550!5m2!1sar!2seg"
+          width="500"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p id="copy">© 2022.iTi etc - HTML CSS JavaScript Ecommerce Template</p>
+    </footer>
+    <audio id="myAudio">
+      <source src="imgs/mixkit-select-click-1109.wav" type="audio/wav">
+    </audio>
+    <script src="product.js"></script>
+  </body>
+</html>

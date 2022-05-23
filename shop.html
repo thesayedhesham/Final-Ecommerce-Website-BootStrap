@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Shop | Shop</title>
+    <link rel="icon" href="imgs/logo.png" />
+    <!--  Logo Font Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font Awesome Link  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="mstyle.css" />
+  </head>
+  <body class="shop_body_style">
+    <header id="navbar">
+      <a href="#top">
+        <span id="logo">
+          <img src="imgs/logo2.png" alt="" />
+        </span>
+      </a>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="active" href="#top">Shop</a>
+        </li>
+        <li>
+          <a href="#footer">About us</a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa-solid fa-cart-plus">
+              <div id="count">0</div>
+            </i>
+          </a>
+        </li>
+        <div id="cartCounter"></div>
+      </ul>
+    </header>
+    <section id="shop_main">
+      <div id="main_head_img"></div>
+    </section>
+    <section class="midPage">
+      <div id="filters">
+        <div id="filters_cat">
+          <span id="main_filters">Filter</span>
+          <div id="cat">
+            <span class="filter_name">Featured Brands</span>
+            <br />
+            <input
+              type="checkbox"
+              id="cat1"
+              class="filterChecker"
+              name="cat1"
+              value="mobiles"
+              onclick="filteredListBuilder()"
+            />
+            <label class="filter_labels" for="cat1">Mobiles</label>
+            <br />
+            <input
+              type="checkbox"
+              id="cat2"
+              class="filterChecker"
+              name="cat2"
+              value="watches"
+              onclick="filteredListBuilder()"
+            />
+            <label class="filter_labels" for="cat2">Watches</label>
+            <br />
+            <input
+              type="checkbox"
+              id="cat3"
+              class="filterChecker"
+              name="cat3"
+              value="laptops"
+              onclick="filteredListBuilder()"
+            />
+            <label class="filter_labels" for="cat3">Laptops</label>
+            <br />
+            <input
+              type="checkbox"
+              id="cat4"
+              class="filterChecker"
+              name="cat4"
+              value="TVs"
+              onclick="filteredListBuilder()"
+            />
+            <label class="filter_labels" for="cat4">TVs</label>
+            <br />
+          </div>
+          <div id="filter_price">
+            <span class="filter_name">Price</span>
+            <br />
+            <span class="radio_options">
+              <input
+                type="radio"
+                name="price"
+                id="under25"
+                value="under25"
+              />Under $25
+            </span>
+            <br />
+            <span class="radio_options">
+              <input type="radio" name="price" id="" value="" />$25 to $100
+            </span>
+            <br />
+            <span class="radio_options">
+              <input type="radio" name="price" id="" value="" />$100 to $200
+            </span>
+            <br />
+            <span class="radio_options">
+              <input type="radio" name="price" id="" value="" />$200 & Above
+            </span>
+          </div>
+        </div>
+      </div>
+      <section id="product">
+        <h2>All Products</h2>
+        <div class="products-cont"></div>
+      </section>
+    </section>
+    <section id="pagination" class="sectionFoot">
+      <a href="shop.html">1</a>
+      <a href="shop.html">2</a>
+      <a href="shop.html">
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <div id="space"></div>
+    </section>
+    <section class="features">
+      <div class="feat">
+        <img src="imgs/features/f1.png" alt="" />
+        <h5>Free Shipping</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f2.png" alt="" />
+        <h5>Online Order</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f3.png" alt="" />
+        <h5>Save Money</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f4.png" alt="" />
+        <h5>Promotions</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f5.png" alt="" />
+        <h5>Happy Sell</h5>
+      </div>
+      <div class="feat">
+        <img src="imgs/features/f6.png" alt="" />
+        <h5>F24/7 Support</h5>
+      </div>
+    </section>
+    <section id="newsletters">
+      <div class="newstxt">
+        <h4>Sign Up For Newsletters</h4>
+        <p>
+          Get E-mail updates about our lastest shop and
+          <span>special offers.</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="email" name="" id="" />
+        <button type="submit">Sign Up</button>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="div1">
+        <h2>Contact</h2>
+        <p>
+          <strong>Adress:</strong> Stad Al Gamaa, Stadium St, Al Meseilhah,
+          Shibin el Kom, Menofia, Egypt
+        </p>
+        <p><strong>Phone:</strong>(+202) 353-55628</p>
+
+        <p><strong>Hours:</strong> 9:00 - 16:00 Sat-Thur</p>
+        <div class="follow">
+          <h5>Follow Us</h5>
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="div2">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440806.19780521165!2d31.293468481398186!3d30.328251102556962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7d7223ff2d63f%3A0x9d531b61c0ebb81b!2sITI%20Menofia%20Branch!5e0!3m2!1sar!2seg!4v1651625868550!5m2!1sar!2seg"
+          width="500"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p id="copy">© 2022.iTi etc - HTML CSS JavaScript Ecommerce Template</p>
+    </footer>
+    <audio id="myAudio">
+      <source src="imgs/mixkit-select-click-1109.wav" type="audio/wav">
+    </audio>
+    <script src="data.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>
