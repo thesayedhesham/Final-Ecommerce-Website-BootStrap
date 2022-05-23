@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  height: 2000px;
+  max-width: 1900px;
 }
 /* Main Style Start */
 :root {
@@ -64,7 +64,6 @@ body {
 /* Nav-Bar End */
 
 /* SlideShow Start */
-
 .carousel img {
   border: 1px solid var(--secondColor);
   border-radius: 5px;
@@ -75,6 +74,7 @@ body {
 
 .feat {
   transition: all 0.3s;
+  border-radius: 5px;
 }
 .feat:hover {
   box-shadow: 10px 10px 55px rgb(0, 0, 0, 0.2);
@@ -104,19 +104,38 @@ body {
 }
 
 /* Features End */
+/*  Product Sec Start */
+
+.card {
+  box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.card:hover {
+  box-shadow: 20px 10px 60px rgb(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.card-body a i {
+  font-size: 18px;
+}
+.card-body a {
+  width: 50px;
+}
+.card-body a:hover {
+  background-color: var(--secondColor);
+}
+/*  Product Sec End */
 /* Banners start*/
-#banner-1{
+#banner-1 {
   background-image: url(imgs/banner/b2.jpg);
 }
 #banners-container .ban-item {
   background-image: url(imgs/banner/190914.jpg);
   background-position: 0% 0%;
   background-size: cover;
-  /* height: 40vh; */
+  height: 30vh;
   justify-content: center;
   align-items: flex-start;
   border-radius: 5px;
-  
 }
 #banners-container .ban-item:nth-child(2) {
   background-image: url(imgs/banner/laptop.jpg);
@@ -134,7 +153,12 @@ body {
 #newsletter {
   background-image: url(imgs/banner/b14.jpg);
 }
+#newsletter button:hover {
+  color: white;
+  background-color: var(--secondColor);
+}
 /* Newsletters End */
+
 /* MediaQuery Start */
 
 @media screen and (max-width: 425px) {
